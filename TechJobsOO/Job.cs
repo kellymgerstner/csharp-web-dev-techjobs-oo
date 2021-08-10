@@ -19,7 +19,7 @@ Id = nextId;
 nextId ++;
 }
 
-public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompetency)
+public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompetency) : this()
 {
 Name = name;
 EmployerName = employerName;
