@@ -19,6 +19,15 @@ Id = nextId;
 nextId ++;
 }
 
+public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompetency)
+{
+Name = name;
+EmployerName = employerName;
+EmployerLocation = employerLocation;
+JobType = jobType;
+JobCoreCompetency = jobCoreCompetency;
+}
+
 
         // TODO: Generate Equals() and GetHashCode() methods.
     }
