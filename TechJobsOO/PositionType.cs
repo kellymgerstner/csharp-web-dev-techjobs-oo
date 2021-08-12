@@ -51,8 +51,5 @@ namespace TechJobsOO
             return "The position type is " + Value;
         }
 
-    
-
-
     }
 }
