@@ -19,7 +19,7 @@ namespace TechJobsTest
             TechJobsOO.Job test_job1 = new TechJobsOO.Job();
             TechJobsOO.Job test_job2 = new TechJobsOO.Job();
 
-            Assert.IsFalse(test_job1 == test_job2);        
+            Assert.IsTrue(test_job2.Id == test_job1.Id + 1);        
         }
 
 
