@@ -15,10 +15,21 @@ namespace TechJobsTest
 
         Job test_job1;
         Job test_job2;
+        Employer test_employer;
+        Location test_location;
+        PositionType test_positionType;
+        CoreCompetency coreCompetency;
+        Job test_job3;
+        [TestInitialize]
         public void CreateTestJobs()
         {
             TechJobsOO.Job test_job1 = new TechJobsOO.Job();
             TechJobsOO.Job test_job2 = new TechJobsOO.Job();
+            TechJobsOO.Employer test_employer = new TechJobsOO.Employer("ACME");
+            TechJobsOO.Location test_location = new TechJobsOO.Location("Desert");
+            TechJobsOO.PositionType test_positionType = new TechJobsOO.PositionType("Quality Control");
+            TechJobsOO.CoreCompetency coreCompetency = new TechJobsOO.CoreCompetency("Persistence");
+            TechJobsOO.Job test_job3 = new TechJobsOO.Job("Product Tester", test_employer, test_location, test_positionType, coreCompetency);
         }
 
         [TestMethod]
@@ -26,11 +37,13 @@ namespace TechJobsTest
         {
             TechJobsOO.Job test_job1 = new TechJobsOO.Job();
             TechJobsOO.Job test_job2 = new TechJobsOO.Job();
-
             Assert.IsTrue(test_job2.Id == test_job1.Id + 1);
         }
 
-        Employer test_employer;
+
+
+
+        /*Employer test_employer;
         [TestInitialize]
         public void CreateTestEmployer()
         {
@@ -63,15 +76,13 @@ namespace TechJobsTest
         public void CreateTestJobWithParameters()
         {
             TechJobsOO.Job test_job3 = new TechJobsOO.Job("Product Tester", test_employer, test_location, test_positionType, coreCompetency);
-        }
+        }*/
         [TestMethod]
         public void TestJobConstructorSetsAllFields()
         {
-           
             Assert.AreEqual(test_job3.Name, "Product Tester");
             Assert.AreEqual(test_job3.EmployerName, test_employer);
             //Assert.AreEqual(test_job3.EmployerLocation, "Location");
-            
         }
 
 
