@@ -48,14 +48,22 @@ namespace TechJobsTests
         public void TestJobToStringMethod()
         {
             Employer employer = new Employer("ACME");
+            Employer emptyEmployer = new Employer("");
             Location location = new Location("Desert");
+            Location emptyLocation = new Location("");
             PositionType position = new PositionType("Quality Control");
+            PositionType emptyPosition = new PositionType("");
             CoreCompetency competency = new CoreCompetency("Persistence");
+            CoreCompetency emptyCompetency = new CoreCompetency("");
+
             Job job3 = new Job("Product Tester", employer, location, position, competency);
-            //Job job4 = new Job("Product Tester", employer, location, position, null);
-            
-            Assert.AreEqual(job3.ToString(), "\n ID: " + job3.Id + "\n Name: " + job3.Name + "\n Employer Name: " + job3.EmployerName.Value + "\n Location: " + job3.EmployerLocation.Value + "\n Position Type: " + job3.JobType.Value + "\n Core Competency: " + job3.JobCoreCompetency.Value + "\n");
-            //Assert.AreEqual(job4.ToString(), "\n ID: " + job4.Id + "\n Name: " + job4.Name + "\n Employer: " + job4.EmployerName.Value + "\n Location: " + job4.EmployerLocation.Value + "\n Position Type: " + job4.JobType.Value + "\n Core Competency: Data not available \n");
+            Job job4 = new Job("ProductTester", emptyEmployer, emptyLocation, emptyPosition, emptyCompetency);
+
+            string test_print1 = "\nID: " + job3.Id + "\nName: " + job3.Name + "\nEmployer Name: " + job3.EmployerName.Value + "\nLocation: " + job3.EmployerLocation.Value + "\nPosition Type: " + job3.JobType.Value + "\nCore Competency: " + job3.JobCoreCompetency.Value + "\n";
+            string test_print2 = "\nID: " + job4.Id + "\nName: " + job4.Name + "Data not available" + "\nEmployer: " + "Data not available" + "\nLocation: " + "Data not available" + "\nPosition Type: " + "Data not available" + "\nCore Competency: " + "Data not available" + "\n";
+
+            Assert.AreEqual(job3.ToString(), test_print1);
+            Assert.AreEqual(job4.ToString(), test_print2);
         }
         
     }

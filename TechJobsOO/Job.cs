@@ -35,16 +35,39 @@ namespace TechJobsOO
         //TODO: Code ToString() method
         public override string ToString()
         {
-            Job job = new Job();
-            string blankLine = "\n";
-            string jobId = "ID: " + this.Id + "\n";
-            string jobName = "Name: " + this.Name + "\n";
-            string employerName = "Employer Name: " + this.EmployerName.Value + "\n";
-            string jobLocation = "Location: " + this.EmployerLocation.Value + "\n";
-            string jobType = "Position Type: " + this.JobType.Value + "\n";
-            string jobCoreCompetency = "Core Competency: " + this.JobCoreCompetency.Value + "\n";
+            string jobId = "\nID: " + this.Id;
+            string jobName = "\nName: " + this.Name;
+            string employerName = "\nEmployer Name: " + this.EmployerName.Value;
+            string jobLocation = "\nLocation: " + this.EmployerLocation.Value;
+            string jobType = "\nPosition Type: " + this.JobType.Value;
+            string jobCoreCompetency = "\nCore Competency: " + this.JobCoreCompetency.Value;
 
-            return blankLine + jobId + jobName + employerName + jobLocation + jobType + jobCoreCompetency;
+            if (jobName == "" || jobName == null)
+            {
+                return "Data Not Available";
+            }
+
+            if (employerName == "" || employerName == null)
+            {
+                return "Data Not Available";
+            }
+
+            if (jobLocation == "" || jobLocation == null)
+            {
+                return "Data Not Available";
+            }
+
+            if (jobType == "" || jobType == null)
+            {
+                return "Data Not Available";
+            }
+
+            if (jobCoreCompetency == "" || jobCoreCompetency == null)
+            {
+                return "Data Not Available";
+            }
+
+            return jobId + jobName + employerName + jobLocation + jobType + jobCoreCompetency + "\n";
 
                    
         }
