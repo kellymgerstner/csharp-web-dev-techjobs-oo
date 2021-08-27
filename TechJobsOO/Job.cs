@@ -45,27 +45,27 @@ namespace TechJobsOO
 
             if (jobName == "" || jobName == null)
             {
-                return dataNotAvailable;
+                this.Name = dataNotAvailable;
             }
 
             if (employerName == "" || employerName == null)
             {
-                return dataNotAvailable;
+                this.EmployerName.Value = dataNotAvailable;
             }
 
             if (jobLocation == "" || jobLocation == null)
             {
-                return dataNotAvailable;
+                this.EmployerName.Value = dataNotAvailable;
             }
 
             if (jobType == "" || jobType == null)
             {
-                return dataNotAvailable;
+                this.JobType.Value = dataNotAvailable;
             }
 
             if (jobCoreCompetency == "" || jobCoreCompetency == null)
             {
-                return dataNotAvailable;
+                this.JobCoreCompetency.Value = dataNotAvailable;
             }
 
             else return jobId + jobName + employerName + jobLocation + jobType + jobCoreCompetency + "\n";
