@@ -31,7 +31,10 @@ namespace TechJobsOO
         }
 
 
-        // TODO: Generate Equals() and GetHashCode() methods.
+
+        //TODO: Code ToString() method
+       
+      
 
 public override bool Equals(object obj)
         {

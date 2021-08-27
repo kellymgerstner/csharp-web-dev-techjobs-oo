@@ -17,7 +17,7 @@ namespace TechJobsOO
             Id = nextId;
             nextId++;
         }
-        protected JobField(string value)
+        protected JobField(string value) : this()
         {
             Value = value;
         }
