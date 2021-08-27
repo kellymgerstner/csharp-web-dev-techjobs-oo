@@ -35,6 +35,8 @@ namespace TechJobsOO
         //TODO: Code ToString() method
         public override string ToString()
         {
+           
+
             string jobId = "\nID: " + this.Id;
             string jobName = "\nName: " + this.Name;
             string employerName = "\nEmployer Name: " + this.EmployerName.Value;
@@ -68,7 +70,8 @@ namespace TechJobsOO
                 this.JobCoreCompetency.Value = dataNotAvailable;
             }
 
-            else return jobId + jobName + employerName + jobLocation + jobType + jobCoreCompetency + "\n";
+
+            return jobId + jobName + employerName + jobLocation + jobType + jobCoreCompetency + "\n";
 
                    
         }
