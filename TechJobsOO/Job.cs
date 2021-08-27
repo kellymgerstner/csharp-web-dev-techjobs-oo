@@ -33,10 +33,24 @@ namespace TechJobsOO
 
 
         //TODO: Code ToString() method
-       
-      
+        public override string ToString()
+        {
+            Job job = new Job();
+            string blankLine = "\n";
+            string jobId = "ID: " + this.Id + "\n";
+            string jobName = "Name: " + this.Name + "\n";
+            string employerName = "Employer Name: " + this.EmployerName.Value + "\n";
+            string jobLocation = "Location: " + this.EmployerLocation.Value + "\n";
+            string jobType = "Position Type: " + this.JobType.Value + "\n";
+            string jobCoreCompetency = "Core Competency: " + this.JobCoreCompetency.Value + "\n";
 
-public override bool Equals(object obj)
+            return blankLine + jobId + jobName + employerName + jobLocation + jobType + jobCoreCompetency;
+
+                   
+        }
+
+
+        public override bool Equals(object obj)
         {
             return obj is Job job &&
                    Id == job.Id;

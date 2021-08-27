@@ -43,7 +43,7 @@ namespace TechJobsTests
         }
 
 
-        /*
+        
         [TestMethod]
         public void TestJobToStringMethod()
         {
@@ -52,11 +52,11 @@ namespace TechJobsTests
             PositionType position = new PositionType("Quality Control");
             CoreCompetency competency = new CoreCompetency("Persistence");
             Job job3 = new Job("Product Tester", employer, location, position, competency);
-            Job job4 = new Job("Product Tester", employer, location, position, null);
+            //Job job4 = new Job("Product Tester", employer, location, position, null);
             
-            Assert.AreEqual(job3.ToString(), "\n ID: " + job3.Id + "\n Name: " + job3.Name + "\n Employer: " + job3.EmployerName.Value + "\n Location: " + job3.EmployerLocation.Value + "\n Position Type: " + job3.JobType.Value + "\n Core Competency: " + job3.JobCoreCompetency.Value + "\n");
-            Assert.AreEqual(job3.ToString(), "\n ID: " + job3.Id + "\n Name: " + job3.Name + "\n Employer: " + job3.EmployerName.Value + "\n Location: " + job3.EmployerLocation.Value + "\n Position Type: " + job3.JobType.Value + "\n Core Competency: Data not available \n");
+            Assert.AreEqual(job3.ToString(), "\n ID: " + job3.Id + "\n Name: " + job3.Name + "\n Employer Name: " + job3.EmployerName.Value + "\n Location: " + job3.EmployerLocation.Value + "\n Position Type: " + job3.JobType.Value + "\n Core Competency: " + job3.JobCoreCompetency.Value + "\n");
+            //Assert.AreEqual(job4.ToString(), "\n ID: " + job4.Id + "\n Name: " + job4.Name + "\n Employer: " + job4.EmployerName.Value + "\n Location: " + job4.EmployerLocation.Value + "\n Position Type: " + job4.JobType.Value + "\n Core Competency: Data not available \n");
         }
-        */
+        
     }
 }
