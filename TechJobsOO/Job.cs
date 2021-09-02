@@ -14,7 +14,6 @@ namespace TechJobsOO
         public PositionType JobType { get; set; }
         public CoreCompetency JobCoreCompetency { get; set; }
 
-        // TODO: Add the two necessary constructors.
         public Job()
         {
             Id = nextId;
@@ -31,12 +30,8 @@ namespace TechJobsOO
         }
 
 
-
-        //TODO: Code ToString() method
         public override string ToString()
         {
-           
-
             string jobId = "\nID: " + this.Id;
             string jobName = "\nName: " + this.Name;
             string employerName = "\nEmployer Name: " + this.EmployerName.Value;
@@ -52,12 +47,12 @@ namespace TechJobsOO
 
             if (employerName == "" || employerName == null)
             {
-                this.EmployerName.Value = dataNotAvailable;
+                this.EmployerName.Value = "Data not available";
             }
 
             if (jobLocation == "" || jobLocation == null)
             {
-                this.EmployerName.Value = dataNotAvailable;
+                this.EmployerLocation.Value = dataNotAvailable;
             }
 
             if (jobType == "" || jobType == null)
