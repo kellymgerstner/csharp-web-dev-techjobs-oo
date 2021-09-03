@@ -32,12 +32,12 @@ namespace TechJobsOO
 
         public override string ToString()
         {
-            string jobId = "\nID: " + this.Id;
-            string jobName = "\nName: " + this.Name;
-            string employerName = "\nEmployer Name: " + this.EmployerName.Value;
-            string jobLocation = "\nLocation: " + this.EmployerLocation.Value;
-            string jobType = "\nPosition Type: " + this.JobType.Value;
-            string jobCoreCompetency = "\nCore Competency: " + this.JobCoreCompetency.Value;
+            int jobId = this.Id;
+            string jobName = this.Name;
+            string employerName = this.EmployerName.Value;
+            string jobLocation = this.EmployerLocation.Value;
+            string jobType = this.JobType.Value;
+            string jobCoreCompetency = this.JobCoreCompetency.Value;
             string dataNotAvailable = "Data not available";
 
             if (jobName == "" || jobName == null)
@@ -47,7 +47,7 @@ namespace TechJobsOO
 
             if (employerName == "" || employerName == null)
             {
-                this.EmployerName.Value = "Data not available";
+                this.EmployerName.Value = dataNotAvailable;
             }
 
             if (jobLocation == "" || jobLocation == null)
@@ -66,7 +66,7 @@ namespace TechJobsOO
             }
 
 
-            return jobId + jobName + employerName + jobLocation + jobType + jobCoreCompetency + "\n";
+            return "ID: " + jobId + "\nJob Name: " + jobName + "\nEmployer Name: " +  employerName + "\nLocation: " + jobLocation + "\nJob Type: " + jobType + "\nCore Competency: " + jobCoreCompetency + "\n";
 
                    
         }
