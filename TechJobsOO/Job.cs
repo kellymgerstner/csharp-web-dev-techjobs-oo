@@ -40,29 +40,29 @@ namespace TechJobsOO
             string jobCoreCompetency = this.JobCoreCompetency.Value;
             string dataNotAvailable = "Data not available";
 
-            if (jobName == "" || jobName == null)
+            if (this.Name == "" || this.Name == null)
             {
-                this.Name = dataNotAvailable;
+                jobName = dataNotAvailable;
             }
 
-            if (employerName == "" || employerName == null)
+            if (this.EmployerName.Value == "" || this.EmployerName.Value == null)
             {
-                this.EmployerName.Value = dataNotAvailable;
+                employerName = dataNotAvailable;
             }
 
             if (jobLocation == "" || jobLocation == null)
             {
-                this.EmployerLocation.Value = dataNotAvailable;
+                jobLocation = dataNotAvailable;
             }
 
             if (jobType == "" || jobType == null)
             {
-                this.JobType.Value = dataNotAvailable;
+                jobType = dataNotAvailable;
             }
 
             if (jobCoreCompetency == "" || jobCoreCompetency == null)
             {
-                this.JobCoreCompetency.Value = dataNotAvailable;
+                jobCoreCompetency = dataNotAvailable;
             }
 
 

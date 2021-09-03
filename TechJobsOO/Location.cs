@@ -7,5 +7,5 @@ namespace TechJobsOO
         {
             Value = value;
         }
-
+    }
 }
